@@ -1,0 +1,242 @@
+/* Estilo base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header, footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    background-color: rgb(142, 168, 73);
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 30px;
+    padding: 0;
+}
+
+li {
+    position: relative;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+li:hover::after {
+    transform: scaleX(1);
+}
+
+button, [id^="btn"] {
+    max-width: 100%;
+    width: auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+/* Títulos */
+h1, h2, h3, h4 {
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: 700;
+    animation: flutuar 2s ease-in-out infinite;
+}
+
+h2 {
+    font-size: 60px;
+    font-weight: 300;
+    margin-top: 60px;
+}
+
+h3, h4 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+h1:hover, h2:hover {
+    transition: 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+
+/* Responsividade de containers e seções */
+section, main, #tudo, .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+section {
+    flex-wrap: wrap;
+}
+
+#tudo {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section img, .column img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 100%;
+}
+
+article img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+/* Ajustes para botões */
+#btnclaro, #btnescuro, #btnverde, #btnverde2, #btnclaro2 {
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 7px;
+    width: 100%;
+    max-width: 250px;
+    margin: 10px;
+}
+
+#btnverde3, #btnescuro2 {
+    font-size: 27px;
+    padding: 15px;
+    width: 100%;
+    max-width: 350px;
+}
+
+#btnverde3 {
+    color: rgb(142, 168, 73);
+    background-color: white;
+}
+
+#btnclaro3, #btnescuro2 {
+    color: white;
+    background-color: black;
+}
+
+#btncenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    header, footer, nav, section, .column {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    li {
+        font-size: 1.2rem;
+    }
+
+    #btnclaro, #btnescuro, #btnverde, #btnverde2, #btnclaro2 {
+        font-size: 15px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    section img {
+        width: 80%;
+    }
+
+    article img {
+        max-width: 100%;
+    }
+
+    #imggolf {
+        width: 90%;
+        height: auto;
+    }
+
+    #tudo {
+        height: auto;
+    }
+
+    .column {
+        width: 90%;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    input, select {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+/* Responsividade para telas muito pequenas (celulares) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    #btnverde3 {
+        font-size: 22px;
+        width: 100%;
+    }
+
+    #btncenter {
+        flex-direction: column;
+    }
+
+    #btnclaro3, #btnescuro2 {
+        font-size: 20px;
+    }
+
+    section img {
+        width: 70%;
+    }
+}
