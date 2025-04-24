@@ -1,13 +1,12 @@
-/* Estilo base */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
 }
 
-header, footer {
+header {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     gap: 10px;
@@ -17,12 +16,11 @@ header, footer {
 
 ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     list-style-type: none;
     gap: 30px;
-    padding: 0;
 }
 
 li {
@@ -49,194 +47,430 @@ li:hover::after {
     transform: scaleX(1);
 }
 
-button, [id^="btn"] {
-    max-width: 100%;
-    width: auto;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    margin: 10px;
+#btnclaro {
+    width: 120px;
+    height: 40px;
+    border: solid 4px black;
+    border-radius: 7px;
+    font-weight: 600;
+    background-color: white;
+    color: black;
+    font-size: 22px;
 }
 
-/* Títulos */
-h1, h2, h3, h4 {
+#btnescuro {
+    width: 120px;
+    height: 40px;
+    border: solid 4px black;
+    border-radius: 7px;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+}
+
+#btnclaro3 {
+    width: 200px;
+    height: 60px;
+    border: solid 4px black;
+    border-radius: 7px;
+    font-weight: 600;
+    background-color: white;
+    color: black;
+    font-size: 27px;
+}
+
+#btnescuro2 {
+    width: 200px;
+    height: 60px;
+    border: solid 4px black;
+    border-radius: 7px;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    font-size: 27px;
+}
+
+#btnverde {
+    width: 150px;
+    height: 30px;
+    border: solid 4px rgb(142, 168, 73);
+    border-radius: 7px;
+    font-weight: 500;
+    background-color: rgb(142, 168, 73);
+    color: black;
+    font-size: 17px;
     text-align: center;
-    margin: 0;
+}
+
+#btnverde3 {
+    width: 500px;
+    height: 60px;
+    border: solid 4px rgb(142, 168, 73);
+    border-radius: 7px;
+    font-weight: 600;
+    background-color: white;
+    color: rgb(142, 168, 73);
+    font-size: 33px;
+}
+
+#btnverde2 {
+    width: 120px;
+    height: 26px;
+    font-size: 13px;
+    border: solid 4px rgb(142, 168, 73);
+    border-radius: 7px;
+    font-weight: 500;
+    background-color: rgb(142, 168, 73);
+    color: black;
+    text-align: center;
+}
+
+#btnclaro2 {
+    width: 150px;
+    height: 30px;
+    border: solid 2px black;
+    border-radius: 7px;
+    font-weight: 600;
+    background-color: white;
+    color: black;
+    font-size: 17px;
+}
+
+#negrito {
+    font-weight: bolder;
+    font-size: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+#negrito:hover {
+    transform: scale(1.1);
+}
+
+h4 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: -23px;
+}
+
+h3 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 300;
 }
 
 h1 {
+    text-align: center;
     font-size: 80px;
     font-weight: 700;
     animation: flutuar 2s ease-in-out infinite;
 }
 
-h2 {
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#h1 {
+    text-align: center;
     font-size: 60px;
-    font-weight: 300;
-    margin-top: 60px;
+    font-weight: 700;
 }
 
-h3, h4 {
-    font-size: 40px;
-    font-weight: 600;
+p h3 {
+    text-align: center;
 }
 
-h1:hover, h2:hover {
-    transition: 0.5s ease-in-out;
-    transform: scale(1.1);
+p {
+    text-align: center;
 }
 
-/* Responsividade de containers e seções */
-section, main, #tudo, .column {
+#p2 {
+    font-size: 19px;
+    padding: 20px;
+    margin-top: 100px;
+    text-align: start;
+}
+
+#p3 {
+    font-size: 16px;
+    padding: 20px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+p img {
+    width: 15px;
+    height: 15px;
+}
+
+.pmarginzero {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+section p {
+    color: black;
+    text-align: center;
+}
+
+#section3 {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(142, 168, 73);
+    margin-top: 70px;
+    margin-bottom: 100px;
+    height: 400px;
+}
+
+section img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
 }
 
 section {
-    flex-wrap: wrap;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#btncenter {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+#imggolf {
+    margin-top: 50px;
+    width: 80%;
+    height: 600px;
+    border-radius: 30px 30px 0px 0px;
 }
 
 #tudo {
+    width: 100%;
     height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-section img, .column img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 100%;
+main {
+    margin-top: 70px;
+}
+
+#seta {
+    background: black;
+    width: 30px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+#row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+}
+
+#boladegolf {
+    width: 80%;
+    height: 80%;
+}
+
+article {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.check {
+    height: 15px;
+    width: 15px;
+}
+
+footer {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(142, 168, 73);
+}
+
+#redessociais {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 23px;
 }
 
 article img {
-    width: 100%;
-    max-width: 350px;
+    height: 230px;
+    width: 350px;
     border-radius: 10px;
 }
 
-/* Ajustes para botões */
-#btnclaro, #btnescuro, #btnverde, #btnverde2, #btnclaro2 {
-    font-size: 17px;
-    padding: 10px;
-    border-radius: 7px;
-    width: 100%;
-    max-width: 250px;
-    margin: 10px;
+#imgalta {
+    height: 510px;
+    width: 300px;
 }
 
-#btnverde3, #btnescuro2 {
-    font-size: 27px;
-    padding: 15px;
-    width: 100%;
-    max-width: 350px;
-}
-
-#btnverde3 {
-    color: rgb(142, 168, 73);
-    background-color: white;
-}
-
-#btnclaro3, #btnescuro2 {
-    color: white;
-    background-color: black;
-}
-
-#btncenter {
-    display: flex;
-    justify-content: center;
+.column, #column {
+    justify-content: space-around;
     align-items: center;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 530px;
+    width: 100%;
 }
 
-/* Responsividade para telas pequenas */
-@media (max-width: 768px) {
-    header, footer, nav, section, .column {
-        flex-direction: column;
-        text-align: center;
-    }
+.mulher1 {
+    margin-top: 30px;
+}
 
-    ul {
+nav section {
+    height: 510px;
+    width: 300px;
+    border: solid 3px rgb(142, 168, 73);
+    border-radius: 10px;
+}
+
+form {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 530px;
+    width: 80%;
+    border-radius: 15px;
+    border: solid 3px rgb(142, 168, 73);
+    gap: 30px;
+    font-size: 22px;
+}
+
+input {
+    height: 40px;
+    width: 300px;
+    border-radius: 15px;
+    border: solid 3px rgb(142, 168, 73);
+    color: rgb(142, 168, 73);
+}
+
+select {
+    color: rgb(142, 168, 73);
+    border: solid 3px rgb(142, 168, 73);
+    font-size: 23px;
+    border-radius: 15px;
+}
+
+img:hover {
+    transition: 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+
+button:hover {
+    transition: 0.5s ease-in-out;
+    opacity: 0.4;
+}
+
+h2:hover {
+    transition: 0.5s ease-in-out;
+    transform: scale(1.2);
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+    header, nav, ul, section, article, footer {
         flex-direction: column;
         gap: 20px;
     }
 
-    li {
-        font-size: 1.2rem;
+    ul {
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
-    #btnclaro, #btnescuro, #btnverde, #btnverde2, #btnclaro2 {
-        font-size: 15px;
-        width: 90%;
-    }
-
-    h1 {
-        font-size: 60px;
-    }
-
-    h2 {
-        font-size: 40px;
-    }
-
-    section img {
-        width: 80%;
-    }
-
-    article img {
-        max-width: 100%;
-    }
-
-    #imggolf {
-        width: 90%;
-        height: auto;
-    }
-
-    #tudo {
-        height: auto;
-    }
-
-    .column {
-        width: 90%;
-    }
-
-    form {
-        width: 90%;
-    }
-
-    input, select {
-        width: 100%;
+    #btnclaro, #btnescuro, #btnverde, #btnclaro2, #btnverde2 {
+        width: 100px;
+        height: 35px;
         font-size: 16px;
     }
-}
 
-/* Responsividade para telas muito pequenas (celulares) */
-@media (max-width: 480px) {
+    #btnclaro3, #btnescuro2 {
+        width: 150px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    #btnverde3 {
+        width: 300px;
+        font-size: 24px;
+    }
+
     h1 {
-        font-size: 45px;
+        font-size: 40px;
     }
 
     h2 {
         font-size: 30px;
     }
 
-    #btnverde3 {
-        font-size: 22px;
+    h4 {
+        font-size: 24px;
+    }
+
+    #imggolf, #boladegolf {
         width: 100%;
+        height: auto;
     }
 
-    #btncenter {
-        flex-direction: column;
+    section img, article img, #imgalta {
+        width: 150px;
+        height: auto;
     }
 
-    #btnclaro3, #btnescuro2 {
-        font-size: 20px;
+    form, input, select {
+        width: 90%;
+        font-size: 18px;
     }
 
-    section img {
-        width: 70%;
+    #section3 {
+        height: auto;
+        padding: 20px;
     }
 }
